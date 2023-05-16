@@ -51,7 +51,6 @@ class BaseDiffusion(Schedule):
 
 
 
-
 def _extract_into_tensor(arr, timesteps, broadcast_shape):
     """
     Extract values from a 1-D numpy array for a batch of indices.
