@@ -1,5 +1,4 @@
 import math
-from abc import abstractmethod
 
 import torch as th
 import torch.nn as nn
@@ -46,7 +45,7 @@ class InpaintUNetModel(GuidedUNet):
         )
 
 
-class SuperResInpaintUNetModel(UNetModel):
+class SuperResInpaintUNetModel(GuidedUNet):
     """
     A UNetModel which can perform both upsampling and inpainting.
     """
