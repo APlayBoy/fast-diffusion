@@ -30,9 +30,8 @@ def make_beta_schedule(schedule, n_timestep, linear_start=1e-4, linear_end=2e-2,
 class Schedule:
      
      def __init__(self, betas) -> None:
-
-        alphas = 1. - betas
-        alphas_cumprod = np.cumprod(alphas, axis=0)
+        alphas = 1.0 - betas
+        alphas_cumprod = np.cumprod(alphas, aixs=0)
         alphas_cumprod_prev = np.append(1., alphas_cumprod[:-1])
 
         timesteps, = betas.shape
